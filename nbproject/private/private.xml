@@ -3,14 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/e-com/resources/views/admin_login.blade.php</file>
-            <file>file:/C:/xampp/htdocs/e-com/resources/views/layout.blade.php</file>
-            <file>file:/C:/xampp/htdocs/e-com/app/Http/Controllers/HomeController.php</file>
-            <file>file:/C:/xampp/htdocs/e-com/resources/views/pages/home.blade.php</file>
-            <file>file:/C:/xampp/htdocs/e-com/app/Http/Controllers/AdminController.php</file>
-            <file>file:/C:/xampp/htdocs/e-com/routes/web.php</file>
-            <file>file:/C:/xampp/htdocs/e-com/resources/views/admin/dashboard.blade.php</file>
-            <file>file:/C:/xampp/htdocs/e-com/resources/views/admin_layout.blade.php</file>
+            <file>file:/C:/xampp/htdocs/online_shopping/database/.gitignore</file>
+            <file>file:/C:/xampp/htdocs/online_shopping/database/migrations/2019_01_21_191056_admin_tablee.php</file>
+            <file>file:/C:/xampp/htdocs/online_shopping/config/database.php</file>
+            <file>file:/C:/xampp/htdocs/online_shopping/database/factories/UserFactory.php</file>
         </group>
     </open-files>
 </project-private>
