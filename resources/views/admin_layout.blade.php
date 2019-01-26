@@ -4,10 +4,10 @@
 	
 	<!-- start: Meta -->
 	<meta charset="utf-8">
-        <title>dashboard</title>
-	<meta name="description" content=" admin control panel ">
-	<meta name="author" content="younis saeed">
-	<meta name="keyword" content="admin dashboard">
+	<title>Metro Admin Template - Metro UI Style Bootstrap Admin Template</title>
+	<meta name="description" content="Metro Admin Template.">
+	<meta name="author" content="Łukasz Holeczek">
+	<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 	<!-- end: Meta -->
 	
 	<!-- start: Mobile Specific -->
@@ -15,14 +15,24 @@
 	<!-- end: Mobile Specific -->
 	
 	<!-- start: CSS -->
-	<link id="bootstrap-style" href="{{asset('backend/ss/bootstrap.min.css')}}" rel="stylesheet">
-	<link href="{{asset('backend/css/bootstrap-responsive.min.css')}}" rel="stylesheet">
+	<link id="bootstrap-style" href="{{asset('backend/css/bootstrap.min.css')}}" rel="stylesheet">
+	<link href="{{asset('backend/css/bootstrap-responsive.min.cs')}}s" rel="stylesheet">
 	<link id="base-style" href="{{asset('backend/css/style.css')}}" rel="stylesheet">
 	<link id="base-style-responsive" href="{{asset('backend/css/style-responsive.css')}}" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
 	<!-- end: CSS -->
 	
 
+	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<link id="ie-style" href="css/ie.css" rel="stylesheet">
+	<![endif]-->
+	
+	<!--[if IE 9]>
+		<link id="ie9style" href="css/ie9.css" rel="stylesheet">
+	<![endif]-->
+		
 	<!-- start: Favicon -->
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<!-- end: Favicon -->
@@ -204,7 +214,7 @@
 								</li>	
                             	<li>
                                     <a href="#">
-										<span class="avatar"><img src="img/avatar.jpg" alt="Avatar"></span>
+										<span class="avatar"><img src="{{URL::to('backend/img/avatar.jpg')}}" alt="Avatar"></span>
 										<span class="header">
 											<span class="from">
 										    	Łukasz Holeczek
@@ -220,7 +230,7 @@
                                 </li>
                                 <li>
                                     <a href="#">
-										<span class="avatar"><img src="img/avatar2.jpg" alt="Avatar"></span>
+										<span class="avatar"><img src="{{URL::to('backend/img/avatar2.jpg')}}" alt="Avatar"></span>
 										<span class="header">
 											<span class="from">
 										    	Megan Abott
@@ -296,7 +306,9 @@
 						<!-- start: User Dropdown -->
 						<li class="dropdown">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white user"></i> {{Session::get('admin_name')}}
+								<i class="halflings-icon white user">
+								
+								</i> {{ Session::get('admin_name')}}
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
@@ -304,7 +316,7 @@
  									<span>Account Settings</span>
 								</li>
 								<li><a href="#"><i class="halflings-icon user"></i> Profile</a></li>
-								<li><a href="{{URL::to('/logout')}}"><i class="halflings-icon off"></i> exxxxxxxxxxxxxxxxxxIT</a></li>
+								<li><a href="{{URL::to('/logout')}}"><i class="halflings-icon off"></i> Logout</a></li>
 							</ul>
 						</li>
 						<!-- end: User Dropdown -->
@@ -324,28 +336,37 @@
 			<div id="sidebar-left" class="span2">
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li><a href="index.html"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>	
-						<li><a href="messages.html"><i class="icon-envelope"></i><span class="hidden-tablet"> Messages</span></a></li>
-						<li><a href="tasks.html"><i class="icon-tasks"></i><span class="hidden-tablet"> Tasks</span></a></li>
-						<li><a href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> UI Features</span></a></li>
-						<li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Widgets</span></a></li>
+						<li><a href="{{URL::to('/dashboard')}}"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>
+
+						<li><a href="{{URL::to('/all-category')}}"><i class="icon-envelope"></i><span class="hidden-tablet"> All Category</span></a></li>
+						<li><a href="{{URL::to('/add-category')}}"><i class="icon-tasks"></i><span class="hidden-tablet"> Add category</span></a></li>
+
+						<li><a href="{{URL::to('/all-manufacture')}}"><i class="icon-eye-open"></i><span class="hidden-tablet"> All Manufacture</span></a></li>
+						<li><a href="{{URL::to('/add-manufacture')}}"><i class="icon-dashboard"></i><span class="hidden-tablet"> Add Manufacture</span></a></li>
+
 						<li>
-							<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Dropdown</span><span class="label label-important"> 3 </span></a>
+							<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Products</span><span class="label label-important"> New </span></a>
 							<ul>
-								<li><a class="submenu" href="submenu.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 1</span></a></li>
-								<li><a class="submenu" href="submenu2.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 2</span></a></li>
-								<li><a class="submenu" href="submenu3.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 3</span></a></li>
+								<li><a class="submenu" href="{{URL::to('/add-product')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add Product</span></a></li>
+								<li><a class="submenu" href="{{URL::to('/all-product')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> All Products</span></a></li>
+								
 							</ul>	
 						</li>
-						<li><a href="form.html"><i class="icon-edit"></i><span class="hidden-tablet"> Forms</span></a></li>
-						<li><a href="chart.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> Charts</span></a></li>
-						<li><a href="typography.html"><i class="icon-font"></i><span class="hidden-tablet"> Typography</span></a></li>
-						<li><a href="gallery.html"><i class="icon-picture"></i><span class="hidden-tablet"> Gallery</span></a></li>
-						<li><a href="table.html"><i class="icon-align-justify"></i><span class="hidden-tablet"> Tables</span></a></li>
-						<li><a href="calendar.html"><i class="icon-calendar"></i><span class="hidden-tablet"> Calendar</span></a></li>
-						<li><a href="file-manager.html"><i class="icon-folder-open"></i><span class="hidden-tablet"> File Manager</span></a></li>
-						<li><a href="icon.html"><i class="icon-star"></i><span class="hidden-tablet"> Icons</span></a></li>
-						<li><a href="login.html"><i class="icon-lock"></i><span class="hidden-tablet"> Login Page</span></a></li>
+						<li>
+							<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Slider</span></a>
+							<ul>
+								<li><a class="submenu" href="{{URL::to('/add-slider')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add Slider</span></a></li>
+								<li><a class="submenu" href="{{URL::to('/all-slider')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> All Slider</span></a></li>
+								
+							</ul>	
+						</li>
+						<li><a href="{{URL::to('/manage-order')}}"><i class="icon-list-alt"></i><span class="hidden-tablet"> Manage Order</span></a></li>
+
+						<li><a href="typography.html"><i class="icon-font"></i><span class="hidden-tablet"> Shop Name</span></a></li>
+
+						<li><a href="gallery.html"><i class="icon-picture"></i><span class="hidden-tablet"> Delivery Man</span></a></li>
+
+					
 					</ul>
 				</div>
 			</div>
@@ -359,9 +380,10 @@
 			</noscript>
 			
 			<!-- start: Content -->
-			<div id="content" class="span10">
+	<div id="content" class="span10">
+			
 			@yield('admin_content')
-                      
+			
 
 	</div><!--/.fluid-container-->
 	
@@ -396,37 +418,49 @@
 	
 	<!-- start: JavaScript-->
 
-                                        <script src="{{asset('backend/js/jquery-1.9.1.min.js')}}"></script>
-                                        <script src="{{asset('backend/js/jquery-migrate-1.0.0.min.js')}}"></script>	
-                                        <script src="{{asset('backend/js/jquery-ui-1.10.0.custom.min.js')}}"></script>	
-                                        <script src="{{asset('backend/js/jquery.ui.touch-punch.js')}}"></script>	
-                                        <script src="{{asset('backend/js/modernizr.js')}}"></script>	
-                                        <script src="{{asset('backend/js/bootstrap.min.js')}}"></script>	
-                                        <script src="{{asset('backend/js/jquery.cookie.js')}}"></script>	
-                                        <script src="{{asset('backend/js/fullcalendar.min.js')}}"></script>	
-                                        <script src="{{asset('backend/js/jquery.dataTables.min.js')}}"></script>
-                                        <script src="{{asset('backend/js/excanvas.js')}}"></script>
-                                        <script src="{{asset('backend/js/jquery.flot.js')}}"></script>
-                                        <script src="{{asset('backend/js/jquery.flot.pie.js')}}"></script>
-                                        <script src="{{asset('backend/js/jquery.flot.stack.js')}}"></script>
-                                        <script src="{{asset('backend/js/jquery.flot.resize.min.js')}}"></script>	
-                                        <script src="{{asset('backend/js/jquery.chosen.min.js')}}"></script>	
-                                        <script src="{{asset('backend/js/jquery.uniform.min.js')}}"></script>		
-                                        <script src="{{asset('backend/js/jquery.cleditor.min.js')}}"></script>	
-                                        <script src="{{asset('backend/js/jquery.noty.js')}}"></script>	
-                                        <script src="{{asset('backend/js/jquery.elfinder.min.js')}}"></script>	
-                                        <script src="{{asset('backend/js/jquery.raty.min.js')}}"></script>	
-                                        <script src="{{asset('backend/js/jquery.iphone.toggle.js')}}"></script>	
-                                        <script src="{{asset('backend/js/jquery.uploadify-3.1.min.js')}}"></script>	
-                                        <script src="{{asset('backend/js/jquery.gritter.min.js')}}"></script>	
-                                        <script src="{{asset('backend/js/jquery.imagesloaded.js')}}"></script>	
-                                        <script src="{{asset('backend/js/jquery.masonry.min.js')}}"></script>	
-                                        <script src="{{asset('backend/js/jquery.knob.modified.js')}}"></script>	
-                                        <script src="{{asset('backend/js/jquery.sparkline.min.js')}}"></script>	
-                                        <script src="{{asset('backend/js/counter.js')}}"></script>	
-                                        <script src="{{asset('backend/js/retina.js')}}"></script>
-                                        <script src="{{asset('backend/js/custom.js')}}"></script>
+    <script src="{{asset('backend/js/jquery-1.9.1.min.js')}}"></script>
+	<script src="{{asset('backend/js/jquery-migrate-1.0.0.min.js')}}"></script>
+	<script src="{{asset('backend/js/jquery-ui-1.10.0.custom.min.js')}}"></script>
+	<script src="{{asset('backend/js/jquery.ui.touch-punch.js')}}"></script>
+	<script src="{{asset('backend/js/modernizr.js')}}"></script>
+	<script src="{{asset('backend/js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('backend/js/jquery.cookie.js')}}"></script>
+	<script src='{{asset('backend/Js/fullcalendar.min.js')}}'></script>
+	<script src='{{asset('backend/js/jquery.dataTables.min.js')}}'></script>
+	<script src="{{asset('backend/js/excanvas.js')}}"></script>
+	<script src="{{asset('backend/js/jquery.flot.js')}}"></script>
+	<script src="{{asset('backend/js/jquery.flot.pie.js')}}"></script>
+	<script src="{{asset('backend/js/jquery.flot.stack.js')}}"></script>
+	<script src="{{asset('backend/js/jquery.flot.resize.min.js')}}"></script>
+	<script src="{{asset('backend/js/jquery.chosen.min.js')}}"></script>	
+	<script src="{{asset('backend/js/jquery.uniform.min.js')}}"></script>	
+	<script src="{{asset('backend/js/jquery.cleditor.min.js')}}"></script>	
+	<script src="{{asset('backend/js/jquery.noty.js')}}"></script>	
+	<script src="{{asset('backend/js/jquery.elfinder.min.js')}}"></script>	
+	<script src="{{asset('backend/js/jquery.raty.min.js')}}"></script>	
+	<script src="{{asset('backend/js/jquery.iphone.toggle.js')}}"></script>	
+	<script src="{{asset('backend/js/jquery.uploadify-3.1.min.js')}}"></script>
+	<script src="{{asset('backend/Js/jquery.gritter.min.js')}}"></script>
+	<script src="{{asset('backend/js/jquery.imagesloaded.js')}}"></script>
+	<script src="{{asset('backend/js/jquery.masonry.min.js')}}"></script>
+	<script src="{{asset('backend/js/jquery.knob.modified.js')}}"></script>
+	<script src="{{asset('backend/js/jquery.sparkline.min.js')}}"></script>
+	<script src="{{asset('backend/js/counter.js')}}"></script>
+	<script src="{{asset('backend/js/retina.js')}}"></script>
+	<script src="{{asset('backend/js/custom.js')}}"></script>
 	<!-- end: JavaScript-->
-	
+	<script type="text/javascript" src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js')}}"></script>
+	<script>    
+    $(document).on("click", "#delete", function(e){
+     e.preventDefault();
+     var link = $(this).attr("href");
+     bootbox.confirm("Are you want to delete!!", function(confirmed){
+        if (confirmed) {
+            window.location.href = link;
+        };
+     });
+    });
+</script>
 </body>
+
 </html>

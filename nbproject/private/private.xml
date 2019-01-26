@@ -3,9 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/online_shopping/app/Http/Controllers/AdminController.php</file>
+            <file>file:/C:/xampp/htdocs/online_shopping/public/backend/css/font-awesome-ie7.min.css</file>
+            <file>file:/C:/xampp/htdocs/online_shopping/public/css/app.css</file>
+            <file>file:/C:/xampp/htdocs/online_shopping/public/frontend/css/responsive.css</file>
+            <file>file:/C:/xampp/htdocs/online_shopping/public/frontend/css/main.css</file>
             <file>file:/C:/xampp/htdocs/online_shopping/resources/views/admin_layout.blade.php</file>
             <file>file:/C:/xampp/htdocs/online_shopping/app/Http/Controllers/SuperAdminController.php</file>
+            <file>file:/C:/xampp/htdocs/online_shopping/public/frontend/js/contact.js</file>
             <file>file:/C:/xampp/htdocs/online_shopping/routes/web.php</file>
         </group>
     </open-files>
