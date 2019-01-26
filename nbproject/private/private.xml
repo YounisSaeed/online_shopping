@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/online_shopping/database/.gitignore</file>
-            <file>file:/C:/xampp/htdocs/online_shopping/database/migrations/2019_01_21_191056_admin_tablee.php</file>
-            <file>file:/C:/xampp/htdocs/online_shopping/config/database.php</file>
-            <file>file:/C:/xampp/htdocs/online_shopping/database/factories/UserFactory.php</file>
+            <file>file:/C:/xampp/htdocs/online_shopping/app/Http/Controllers/AdminController.php</file>
+            <file>file:/C:/xampp/htdocs/online_shopping/resources/views/admin_layout.blade.php</file>
+            <file>file:/C:/xampp/htdocs/online_shopping/app/Http/Controllers/SuperAdminController.php</file>
+            <file>file:/C:/xampp/htdocs/online_shopping/routes/web.php</file>
         </group>
     </open-files>
 </project-private>
