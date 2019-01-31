@@ -27,3 +27,4 @@ Route::post('/admin-dashboard','AdminController@dashboard');
 
 ///////category///////
 Route::get('/add-category','CategoryController@index');
+Route::get('/all-category','CategoryController@all_category');
